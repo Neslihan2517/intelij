@@ -44,33 +44,23 @@ public class _12_method12 {
 
         */
 
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("bir sayı giriniz:");
-        int a=sc.nextInt();
-        int kuvvet=0;
-         int taban=3;
+        int a = sc.nextInt();
+        int kuvvet = 0;
+        int taban = 3;
 
+        if (a%3 !=0){
+            System.out.println("sayınız 3'ün katı değil");
+        }
+        else {
+            for (int i=0; i<a; i++){
+                a/=taban;
 
-      for (int i=0; i<=a; i++){
-          if (a%3==0){
-              a/=taban;
-             ++ kuvvet;
-
-          }else System.out.println("3'ün kuvveti değil");
-
-
-
-
-
-      }System.out.println("girdiğiniz sayının üç tabanında kuvveti: "+kuvvet);
-
-
+                kuvvet++;
+            }
+            System.out.println("Sayınız 3'ün "+ kuvvet + " . kuvvetidir.");
+        }
 
     }
-
-
-
-
-
-
 }
